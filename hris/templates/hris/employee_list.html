@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1> Welcome </h1>
+<br>
+<p>{{ employee.employee_number }}</p> 
+</br>
+
+<p>{{ employee.first_name }} {{ employee.last_name }}</p>
+
+<p>Salaries: {{employee.salary}}</p>
+
+<br>
+{% endblock %}
