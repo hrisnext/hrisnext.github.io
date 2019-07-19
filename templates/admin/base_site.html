@@ -1,0 +1,9 @@
+{% extends "admin/base.html" %}
+
+{% block title %}{{ title }} | {{ site_title|default:_('my site admin') }}{% endblock %}
+
+{% block branding %}
+<h1 id="hrisnext"><a href="{% url 'admin:index' %}">hrisnext</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
