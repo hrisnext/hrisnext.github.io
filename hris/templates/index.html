@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'hcm/style.css' %}">
+<br>
+{% if latest_employees_list %}
+    <ul>
+            
+    {% for employees in latest_employees_list %}
+        <li><a href="{% url "hris:detail" employees.id %}">{{ employees.emp_no }}  {{ employees.first_name }}  {{ employees.last_name }}</a></li>
+    {% endfor %}
+            <br>
+    </ul>
+{% else %}
+    <p>No employee are available.</p>
+{% endif %}
+<br>
