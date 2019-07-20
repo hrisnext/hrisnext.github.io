@@ -11,13 +11,13 @@
     {% if request.user.is_authenticated %}
       <ul class="menu">
         <li {% if section == "hris" %}class="selected"{% endif %}>
-        
+          <a href="{% url "hris:index" %}">My HRIS</a>
         </li>
         <li {% if section == "payroll" %}class="selected"{% endif %}>
           
         </li>
         <li {% if section == "timecards" %}class="selected"{% endif %}>
-           
+          <a href="{% url "timecards:allcards-list" %}"> Timecards</a>
         </li>
       </ul>
     {% endif %}
