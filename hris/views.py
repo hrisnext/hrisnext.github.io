@@ -10,7 +10,7 @@ def index(request):
     context = {
         'latest_employees_list' : latest_employees_list ,
     }
-    return render(request, 'index.html', context=context)
+    return render(request, 'hris/index.html', context=context)
 
 class EmployeeListView(generic.ListView):
     model = Employee

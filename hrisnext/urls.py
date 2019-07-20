@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from django.views.generic import RedirectView
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -22,5 +24,6 @@ urlpatterns = [
     path('payroll/',include('payroll.urls')),
     path('timecards/',include('timecards.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('', RedirectView.as_view(url='/hris/', permanent=True))
     
 ]
