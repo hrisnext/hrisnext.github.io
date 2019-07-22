@@ -5,6 +5,7 @@ from . import views
 app_name = 'payroll'
 
 urlpatterns = [
-    #path('', views.payroll_list, name='payroll'),
-    #path('add/', views.add_view, name='add'),
+    path('', views.index, name='index'),
+    path('paycallist/', views.PaycalListView.as_view(), name='paycal-list'),
+    path('paycaldetail/', views.PaycalDetailView.as_view(), name='paycal-detail'),
 ]
