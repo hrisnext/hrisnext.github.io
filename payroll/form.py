@@ -1,6 +1,6 @@
 import datetime
 from django import forms
-
+from hris.models import Employee
 
 
 class PayrollForm(forms.Form):
