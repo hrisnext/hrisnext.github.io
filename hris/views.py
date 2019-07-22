@@ -29,6 +29,6 @@ def add_employee(request):
     else:
         new_employee_form = EmployeeForm()
 
-    return render(request,'hris/add.html',{'new_employee':new_employee,'new_employee_form':new_employee_form,})
+    return render(request,'add.html',{'new_employee':new_employee,'new_employee_form':new_employee_form,})
 
 

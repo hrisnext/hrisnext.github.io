@@ -6,6 +6,7 @@ app_name = 'payroll'
 
 urlpatterns = [
     path('', views.index, name='index'),
+    #path('', views.add, name='add'),
     path('paycallist/', views.PaycalListView.as_view(), name='paycal-list'),
     path('paycaldetail/', views.PaycalDetailView.as_view(), name='paycal-detail'),
 ]
