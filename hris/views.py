@@ -18,6 +18,7 @@ class EmployeeListView(generic.ListView):
 
 class EmployeeDetailView(generic.DetailView):
     model = Employee
+new_comment = None
 
 def add_employee(request):
 
@@ -29,6 +30,6 @@ def add_employee(request):
     else:
         new_employee_form = EmployeeForm()
 
-    return render(request,'hris/add.html',{'new_employee_form':new_employee_form,})
+    return render(request,'hris/add.html',{'new_comment':new_comment,'new_employee_form':new_employee_form,})
 
 
