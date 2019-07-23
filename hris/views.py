@@ -1,11 +1,12 @@
 from django.shortcuts import render
 from django.views import generic
-
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 from hris.models import Employee
 from hris.forms import EmployeeForm
 
+@login_required(login_url='/accounts/login')
 def index(request):
     latest_employees_list = Employee.objects.all()
     context = {
