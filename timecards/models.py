@@ -26,7 +26,7 @@ class Allcards(models.Model):
     def get_worked_hours(self):
         timediff = self.clocked_out - self.clocked_in 
 
-        return timediff.total_seconds()
+        return timediff.total_seconds()/3600
         
     def save(self, *args, **kwargs):
           self.in_date = self.get_in_date
