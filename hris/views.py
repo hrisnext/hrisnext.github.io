@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from django.views import generic
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.urls import reverse_lazy
+from django.views.generic.edit import CreateView, DeleteView, UpdateView
 
 # Create your views here.
 from hris.models import Employee
@@ -32,5 +35,19 @@ def add_employee(request):
         new_employee_form = EmployeeForm()
 
     return render(request,'hris/add.html',{'new_comment':new_comment,'new_employee_form':new_employee_form,})
+
+class EmployeeCreate(LoginRequiredMixin, CreateView):
+    model = Employee
+    fields = ('last_name','first_name', 'birthdate','sin_number','salary','employee_number','hire_date')
+
+class EmployeeDelete(LoginRequiredMixin, DeleteView):
+    model = Employee
+    success_url = reverse_lazy('employee-list')
+
+class EmployeeUpdate(LoginRequiredMixin, UpdateView):
+    model = Employee
+    fields = ('last_name','first_name', 'birthdate','sin_number','salary','employee_number','hire_date')
+
+
 
 
