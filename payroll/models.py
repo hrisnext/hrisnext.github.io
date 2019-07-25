@@ -20,3 +20,4 @@ class Paycal(models.Model):
     taxp_ee = models.DecimalField(max_digits = 16, decimal_places = 5)
     taxf_ee = models.DecimalField(max_digits = 16, decimal_places = 5)
     
+    

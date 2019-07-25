@@ -1,6 +1,7 @@
 import datetime
 from django import forms
-from hris.models import Employee
+from payroll.models import Paycal
+
 
 
 class PaycalForm(forms.ModelForm):
@@ -9,4 +10,6 @@ class PaycalForm(forms.ModelForm):
     should be.
     
     '''
-    
+    class Meta:
+        model = Paycal
+        fields = ('p_period',)
