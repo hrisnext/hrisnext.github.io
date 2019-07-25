@@ -3,15 +3,16 @@
 {% block content %}
 <h1> Welcome </h1>
 <br>
-<h1>Add a new employee</h1>
-<p>You add a new employee using the following form:</p>
-<form action="." method="post" enctype="multipart/form-data">
 
-  {{ new_employee_form.as_p }}
- 
+<h1>Delete Author</h1>
+
+<p>Are you sure you want to delete the author: {{ employee }}?</p>
+
+<form action="" method="POST">
   {% csrf_token %}
-  <p><input type="submit" value="Save changes"></p>
+  <input type="submit" value="Yes, delete.">
 </form>
+
 
 <br>
 {% endblock %}
