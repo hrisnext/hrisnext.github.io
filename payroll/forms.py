@@ -12,4 +12,4 @@ class PaycalForm(forms.ModelForm):
     '''
     class Meta:
         model = Paycal
-        fields = ('p_period',)
+        fields = ('p_period','earning_pp')
