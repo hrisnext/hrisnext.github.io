@@ -28,11 +28,11 @@ class PaycalDetailView(generic.DetailView):
 
 class PaycalCreate(LoginRequiredMixin, CreateView):
     model = Paycal
-    fields = ('p_period',)
+    fields = ('p_period','earning_pp',)
 
 class PaycalUpdate(LoginRequiredMixin, UpdateView):
     model = Paycal
-    fields = ('p_period',)
+    fields = ('p_period','earning_pp',)
 
 class PaycalDelete(LoginRequiredMixin, DeleteView):
     model = Paycal
