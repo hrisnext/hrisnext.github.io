@@ -1,4 +1,5 @@
-    ei_er_rate =  
+class qcrates():
+    ei_er_rate =  0.00152
     cpp_er_rate =  
     qpip_er_rate =  
     wcb_er_rate =  
