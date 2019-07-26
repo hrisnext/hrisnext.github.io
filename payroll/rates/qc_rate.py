@@ -1,0 +1,13 @@
+    ei_er_rate =  
+    cpp_er_rate =  
+    qpip_er_rate =  
+    wcb_er_rate =  
+    cnt_er_rate =  
+    hsf_er_rate =  
+    vac_er_rate =  
+    pmtf_er_rate =  
+    ei_ee_rate =  
+    cpp_ee_rate =  
+    qpip_ee_rate =  
+    taxp_ee_rate =  
+    taxf_ee_rate =  
