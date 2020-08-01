@@ -13,3 +13,12 @@ class AllcardsForm(forms.Form):
     class Meta:
         model = Allcards
         fields = ('employee_number','clocked_in','clocked_out')
+'''
+        widgets = {
+            'clocked_in': forms.DateTimeInput(),
+            'clocked_out': forms.DateTimeInput()
+        }
+class Signup(CreateView):
+    form_class = AllcardsForm
+    model = Allcards
+'''

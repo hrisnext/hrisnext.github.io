@@ -34,6 +34,5 @@ class Allcards(models.Model):
           self.worked_hours = self.get_worked_hours
           super(Allcards, self).save(*args, **kwargs)
 
-
-
-
+    def __str__(self):
+        return str(self.employee_number) + "had worked for " + str(self.worked_hours) + "hours"

@@ -12,6 +12,7 @@ urlpatterns = [
     path('employee/<int:pk>/',views.EmployeeDetailView.as_view(), name = 'employee-detail'),
     path('employee/<int:pk>/update/', views.EmployeeUpdate.as_view(), name='employee-update'),
     path('employee/<int:pk>/delete/', views.EmployeeDelete.as_view(), name='employee-delete'),
+    #path('cd/', views.current_datetime, name='current_datetime'),
     
     #path('add/', views.add_view, name='add'),
 ]

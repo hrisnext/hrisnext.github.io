@@ -1,0 +1,48 @@
+{% extends "base_generic.html" %}
+{% load static %}
+
+{% block content %}
+
+<body>
+    <h2>Quebec Payroll simulation</h2>
+    <form method="post" action="">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>Your rate:</td>
+                <td><strong>{{ rate }}</strong></td>
+            </tr>
+            <tr>
+                <td>Your hours:</td>
+                <td><strong>{{ hours }}</strong></td>
+            </tr>
+            <tr>
+                <td>Your cpp:</td>
+                <td><strong>{{ cpp }}</strong></td>
+            </tr>
+            <tr>
+                <td>Your ei:</td>
+                <td><strong>{{ ei }}</strong></td>
+            </tr>
+            <tr>
+                <td>Your wcb:</td>
+                <td><strong>{{ wcb }}</strong></td>
+            </tr>
+            <tr>
+                <td>Your qpip:</td>
+                <td><strong>{{ qpip }}</strong></td>
+            </tr>
+            <tr>
+                <td>Your wcb:</td>
+                <td><strong>{{ wcb }}</strong></td>
+            </tr>
+            
+            <tr>
+                <td>Your wcb:</td>
+                <td><strong>{{ wcb }}</strong></td>
+            </tr>
+        </table>
+    </form>
+    </body>
+
+{% endblock %}

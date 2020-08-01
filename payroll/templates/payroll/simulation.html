@@ -1,0 +1,36 @@
+{% extends "base_generic.html" %}
+{% load static %}
+
+{% block content %}
+
+<body>
+    <h2>Quebec Payroll simulation</h2>
+
+    <form method="post" action="">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>Enter your rate:</td>
+                <td><input type="number" name="rate"/></td>
+            </tr>
+            <tr>
+                <td>Enter your hours:</td>
+                <td><input type="number" name="hours"/></td>
+            </tr>
+            <tr>
+                <td>Enter your payroll frequency:</td>
+                <td><input type="number" name="payf"/></td>
+            </tr>
+            <tr>
+                <td>
+    
+                </td>
+                <td>
+                    <button>Submit Form</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    </body>
+
+{% endblock %}

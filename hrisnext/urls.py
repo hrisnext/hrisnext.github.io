@@ -16,9 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from django.views.generic import RedirectView
-
+from hris import views
 
 urlpatterns = [
+    #path('', views.index, name='index'),
     path('admin/', admin.site.urls),
     path('hris/',include('hris.urls')),
     path('payroll/',include('payroll.urls')),

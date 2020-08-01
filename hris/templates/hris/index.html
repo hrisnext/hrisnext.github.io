@@ -4,6 +4,7 @@
 {% block content %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'hris/style.css' %}">
+<h1>my HRIS defailt page</h1>
 <br>
 {% if latest_employees_list %}
     <ul>
@@ -17,5 +18,5 @@
     <p>No employee are available.</p>
 {% endif %}
 <br>
-
+{{ num_visits }}
 {% endblock %}

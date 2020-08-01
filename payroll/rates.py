@@ -10,13 +10,10 @@ class qcrates():
     ei_ee_rate =  0.01250
     cpp_ee_rate =  0.05550
     qpip_ee_rate =  0.00526
-    taxp_ee_rate_1 =  0.15000
-    taxp_ee_rate_2 =  0.20500
-    taxp_ee_rate_3 =  0.26000
-    taxp_ee_rate_4 =  0.29000
-    taxp_ee_rate_5 =  0.33000
-    taxf_ee_rate1 =  0.10000
-    taxf_ee_rate2 =  0.12000
-    taxf_ee_rate3 =  0.13000
-    taxf_ee_rate4 =  0.14000
-    taxf_ee_rate5 =  0.15000
+    pQcRange = [0,43790,87575,106555]
+    pQcRate = [0,0.15,0.20,0.24,0.2575]
+
+class fdrates():
+    fRange = [0,47630,95259,147667,210371]
+    fRate = [0,0.15,0.205,0.26,0.29,0.33]
+    fQuickDeduction = [0, 0, 6887.40, 16300.18, 29435.90, 46965.53]
