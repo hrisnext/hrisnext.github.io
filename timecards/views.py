@@ -17,13 +17,13 @@ from timecards.forms import AllcardsForm
 class AllcardsListView(generic.ListView):
     model = Allcards
 
+
 class AllcardsDetailView(generic.DetailView):
     model = Allcards
 
 class AllcardsCreate(LoginRequiredMixin, CreateView):
     model = Allcards
     fields = ('employee_number','clocked_in','clocked_out')
-    
     
     def get_form(self, form_class=None):
         form = super().get_form(form_class)
@@ -48,3 +48,10 @@ class HomePageView(TemplateView):
         context = super().get_context_data(**kwargs)
         context['latest_timecards'] = Allcards.objects.all()[:5]
         return context
+
+def detail(request, allcards_id):
+    try:
+        timecard = Allcards.objects.get(pk=allcards_id)
+    except Allcards.DoesNotExist:
+        raise Http404("Question does not exist")
+    return render(request, 'timecards/detail.html', {'timecard': timecard})

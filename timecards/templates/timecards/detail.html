@@ -3,11 +3,11 @@
 {% block content %}
 <h1> This is the timecard for </h1>
 <br>
-<p>{{ employee.employee_number }}</p> 
+<p>{{ timecard.employee_number }}</p> 
 </br>
 
-<p>{{ allcards.worked_hours }} </p>
+<p>{{ timecard.worked_hours }} </p>
 
-<p>{{ allcards.worked_days }} </p>
+<p>{{ timecard.get_out_date }} </p>
 <br>
 {% endblock %}

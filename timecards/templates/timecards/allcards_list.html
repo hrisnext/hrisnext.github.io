@@ -4,10 +4,22 @@
 {% block content %}
 <h1> This is the timecard for </h1>
 <br>
-<p>{{ employee.employee_number }}</p> 
-</br>
 
-<p>{{ latest_timecards }} </p>
+{% comment %}
+
+{% latest_timecards %}
+
+{% endcomment %}
+
+{% if latest_timecards %}
+<ul>
+    {% for timecard in latest_timecards %}
+        <li><a href="/timecards/{{ timecard.id }}/">{{ timecard.employee_number }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No timecards are available.</p>
+{% endif %}
 
 <br>
 {% endblock %}
